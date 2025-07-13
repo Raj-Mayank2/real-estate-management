@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/properties")
+      .get("https://realestate-api-jvt3.onrender.com/api/properties")
       .then((response) => setProperties(response.data))
       .catch((error) => console.error(error));
   }, []);
