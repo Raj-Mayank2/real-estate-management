@@ -1,0 +1,198 @@
+/* App.css */
+
+/* Container & Layout */
+.App {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Headings */
+h1.Mayank {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+h1 + h1 {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+form {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #222;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px #007bffaa;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 8px #007bffcc;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Property List */
+.property-list {
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.property-list > div {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: box-shadow 0.3s ease;
+}
+
+.property-list > div:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.property-image {
+  width: 180px;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.property-details {
+  flex-grow: 1;
+}
+
+.property-details h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.3rem;
+}
+
+.property-details p {
+  margin: 6px 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Property Actions (buttons) */
+.property-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.property-actions button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #007bffcc;
+  transition: background-color 0.3s ease;
+}
+
+.property-actions button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 15px #0056b399;
+}
+
+.property-actions button.delete-btn {
+  background-color: #dc3545;
+  box-shadow: 0 2px 8px #dc3545cc;
+}
+
+.property-actions button.delete-btn:hover {
+  background-color: #a71d2a;
+  box-shadow: 0 4px 15px #a71d2a99;
+}
+
+/* Responsive: stack property cards vertically on small screens */
+@media (max-width: 640px) {
+  .property-list > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .property-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .property-details {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .property-actions {
+    justify-content: center;
+  }
+}
